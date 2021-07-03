@@ -1,0 +1,141 @@
+.post {
+    composes: share from "/home/alpha/mern_stack/Social_Media/client/src/components/feed/Feed.module.css" ; 
+    height:100%; 
+    margin : 30px 0 ; 
+   
+}
+.postImage{
+    composes: lfimage from "/home/alpha/mern_stack/Social_Media/client/src/components/leftbar/LeftBar.module.css"
+   ;
+}
+
+.postTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.postTopLeft {
+    display: flex;
+    padding: 10px;
+    
+}
+
+.postUserName{
+    margin-left: -10px;
+    font-size: smaller;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+ .postDate{
+     margin-left: 14px;
+     
+     font-size: 12px;
+     font-weight: 300;
+ }
+
+  .postTopRight{
+      padding: 7px;
+      cursor: pointer;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+  
+      align-items: center;
+      text-align: center;
+  }
+
+  .postTopRight:hover{
+      background-color: rgb(228, 227, 227);
+  }
+ .postWrapper{
+     padding: 7px;
+     
+ }
+.postText{
+    margin:-1px 11px;
+   
+    font-size: 15px;
+    font-weight: 400;
+     
+    
+}
+
+.postimg{
+   margin-top: 10px ;
+    width: 100%;
+   max-height: 500px;
+   object-fit: contain ; 
+
+}
+
+.react{
+    width: 23px;
+    height: 23px;
+ 
+   border-radius: 50%;
+   cursor: pointer;
+    
+     
+}
+.reactdl{
+    width: 23px;
+    height: 23px;
+ 
+   border-radius: 50%;
+   cursor: pointer;
+ 
+    /* flip vertically and horizontally together */
+    transform: scale(-1, -1);
+    margin-left: 5px;
+  
+   
+    
+     
+}
+.reactlike{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: royalblue;
+    display: grid;
+    place-items: center;
+    color: white;
+    cursor: pointer;
+    margin-right: 7px;
+    margin-top: 4px;
+    
+     
+}
+ 
+
+ .postBottom{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 6px;
+ }
+
+ .postBottomLeft{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+ }
+
+ .reactCount{
+     font-size: 14px;
+     font-weight: 500;
+     border-bottom: 1px dashed grey;
+ }
+ .reactCountlike{
+     font-size: 14px;
+     font-weight: 500;
+     margin-top: 2px;
+     margin-left: 10px;
+ }
+
+ .like{
+     margin-right: 10px;
+ }

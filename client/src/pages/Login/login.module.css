@@ -1,0 +1,91 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginwrapper{
+     
+    height: 70%;
+    width: 70%;
+    display: flex;
+}
+
+.loginleft,.loginright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    
+    
+}
+
+.logo{
+     
+    font-weight: 900;
+    color: #1775ee;
+    font-size: 50px;
+    
+}
+.dec{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.loginbox{
+    height: 300px;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: space-between;
+
+}
+
+.logininput{
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-size: 18px;
+    padding-left: 19px;
+}
+
+.logininput:focus{
+    outline: none;
+}
+
+.loginbtn{
+    height: 50px;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    background-color: royalblue; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.forgetpass{
+    text-align: center;
+    font-weight: 500;
+    color: royalblue;
+    cursor: pointer;
+}
+
+.registerbtn{
+    height: 50px;
+    width: 50%;
+    align-self: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    background-color:#42b72a; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer
+}
