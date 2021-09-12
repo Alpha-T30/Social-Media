@@ -8,7 +8,7 @@ import RightBar from '../../components/rightbar/RightBar';
 export default function Homepage() {
   return (
     <>
-     <TopBar></TopBar>
+     <TopBar homepage></TopBar>
 
       <div className={Style.homepagecontainer}>
       < LeftBar/>  

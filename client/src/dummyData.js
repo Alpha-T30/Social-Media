@@ -3,43 +3,43 @@ export const Users = [
         
         id:1,
         name: "Enamul",
-        dp:"/assets/UserImages/1.jpg"
+        dp:"UserImages/1.jpg"
     } , 
     {
         
         id:2,
         name: "Joker",
-        dp:"/assets/UserImages/2.jpg"
+        dp:"UserImages/2.jpg"
     } , 
     {
         
         id:3,
         name: "Bat Man",
-        dp:"/assets/UserImages/batman.jpg"
+        dp:"UserImages/batman.jpg"
     } , 
     {
         
         id:4,
         name: "Superman",
-        dp:"/assets/UserImages/superman.jpg"
+        dp:"UserImages/superman.jpg"
     } , 
     {
         
         id:5,
         name: "Iron Man",
-        dp:"/assets/UserImages/ironman.jpg"
+        dp:"UserImages/ironman.jpg"
     } , 
     {
         
         id:6,
         name: "Hulk",
-        dp:"/assets/UserImages/hulk.jpg"
+        dp:"UserImages/hulk.jpg"
     } , 
     {
         
         id:7,
         name: "Thanos",
-        dp:"/assets/UserImages/thanos.jpg"
+        dp:"UserImages/thanos.jpg"
     } , 
 ]
 
@@ -52,7 +52,7 @@ export const Posts =[
         comment:9 ,
         date : "6 mins ago" , 
         post:"Lorem ipsum dolor sit amet",
-        photo :"/assets/posts/1.jpg"
+        photo :"posts/1.jpg"
     },
     {
         id:2,
@@ -61,7 +61,7 @@ export const Posts =[
         comment:9 ,
         date : "3 mins ago" , 
         post:"Lorem ipsum dolor sit amet",
-        photo :"/assets/posts/2.jpg"
+        photo :"posts/2.jpg"
     } ,
     {
         id:3,
@@ -70,7 +70,7 @@ export const Posts =[
         comment:93 ,
         date : "3 mins ago" , 
         post:"Lorem ipsum dolor sit amet",
-        photo :"/assets/posts/3.jpg"
+        photo :"posts/3.jpg"
     },
     {
         id:4,
@@ -79,7 +79,7 @@ export const Posts =[
         comment:49 ,
         date : "4 mins ago" , 
         post:"Lorem ipsum dolor sit amet",
-        photo :"/assets/posts/4.jpg"
+        photo :"posts/4.jpg"
     },
     {
         id:5,
@@ -88,7 +88,7 @@ export const Posts =[
         comment:59 ,
         date : "5 mins ago" , 
         post:"Lorem ipsum dolor sit amet",
-        photo :"/assets/posts/5.jpg"
+        photo :"posts/5.jpg"
     },
     {
         id:6,
@@ -97,7 +97,7 @@ export const Posts =[
         comment:69 ,
         date : "6 mins ago" , 
         post:"Lorem ipsum dolor sit amet",
-        photo :"/assets/posts/6.jpg"
+        photo :"posts/6.jpg"
     },
     {
         id:7,
@@ -106,6 +106,6 @@ export const Posts =[
         comment:79 ,
         date : "6 mins ago" , 
         post:"Lorem ipsum dolor sit amet",
-        photo :"/assets/posts/7.jpg"
+        photo :"posts/7.jpg"
     }
 ]

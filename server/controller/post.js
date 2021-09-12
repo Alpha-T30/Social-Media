@@ -124,7 +124,27 @@ export const GetAllPosts=async (req,res)=> {
     }
 
 }
+export const GetUserPosts=async (req,res)=> { 
+    try {
+        const currentuser = await User.findOne({username:req.params.username}) 
+        const MyPosts=await Posts.find({userId:currentuser._id}) 
 
+     
+    const allposts = [] ; 
+    MyPosts.forEach((e)=>{
+        allposts.push(e) ; 
+    }) ; 
+    
+      res.send(allposts) ; 
+    } catch (error) {
+        res.send(error) ; 
+        
+    }
+
+}
+
+// Get user posts 
+ 
 
 //comment on a post  
 export const CommentOnPost = (req,res) =>{ 

@@ -13,11 +13,13 @@ import SidebarItem from "./sideBarItem";
 import Lfriend from './lftbarfriend';
 import { LeftFriends } from './leftFriends';
 
-export default function LeftBar() {
+export default function LeftBar({user}) {
+  const  PF=process.env.REACT_APP_PUBLIC_FOLDER ; 
   return (
-    <div className={Style.leftbar}>
+    <div className={user?Style.leftbarc:Style.leftbar}>
       <div className={Style.sidebarWrapper}>
         <ul className={Style.sidebarList}>
+          
           <SidebarItem  key={1} id={1} icon={RssFeed} iconName={"Feed"} />
           <SidebarItem  key={2} id ={2} icon={Bookmark} iconName={"Bookmark"} />
           <SidebarItem  key={3} id ={3} icon={Chat} iconName={"Chat"} />
@@ -32,7 +34,7 @@ export default function LeftBar() {
         <ul className={Style.leftbarfriend}>
          { LeftFriends.map ((e ,i)=>{
             
-         return  (<Lfriend key={i} id={i}  lfimg={e.imgUrl} lfname={e.name}></Lfriend>)
+         return  (<Lfriend key={i} id={i}  lfimg={PF+e.imgUrl} lfname={e.name}></Lfriend>)
           })}
           
         </ul>

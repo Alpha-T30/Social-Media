@@ -1,16 +1,18 @@
 import express from "express" ; 
-import {FollowUser, GetUser ,UpdateUser,DeleteUser, UnFollowUser } from  "../controller/user.js" 
-
- 
-
-
+import {GetFriends,FollowUser, GetUser ,UpdateUser,DeleteUser, UnFollowUser } from  "../controller/user.js" 
+  
 const router=express.Router() ; 
 
-//update a single use
+// get conversation with 2 users 
+
+
+
+//update a single User
+router.get("/",GetUser) ; 
 //delete a single user
 //get a single user
 router.route("/:id")
-.get(GetUser)
+ 
 .patch(UpdateUser)
 .delete(DeleteUser) ; 
 
@@ -18,6 +20,8 @@ router.route("/:id")
 router.patch("/:id/follow",FollowUser) ; 
 //unfollow a single user
 router.patch("/:id/unfollow",UnFollowUser) ; 
+ 
+//get all the friends 
  
 
 export default router ; 

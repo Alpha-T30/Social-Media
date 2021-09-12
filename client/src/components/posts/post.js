@@ -1,23 +1,37 @@
 import { MoreVert} from "@material-ui/icons";
 import Style from "./post.module.css";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import {format} from "timeago.js" ; 
  
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
+ 
 
 export default function Post({post}) {
-  console.log(post)
+
+  const PF=process.env.REACT_APP_PUBLIC_FOLDER; 
+ 
+  const {user:currentuser} =useContext(AuthContext) ;   
    
   const [like, setlike] = React.useState(post.likes.length);
  
  
   const [isliked, setisliked] = React.useState(false);
 
- 
+ useEffect(()=>{
+   setlike(post.likes.includes(currentuser._id))
+ },[currentuser._id,post.likes])
  
 
- function reply_click_like(event) {
+ const  reply_click_like= async  () =>{
+   try {
+     await  axios.patch("/posts/"+post._id+"/likes/",{userId:currentuser._id})
+     
+   } catch (error) {
+
+     console.log(error)
+   }
  
     setlike(isliked?like-1:like+1) ; 
    
@@ -31,7 +45,7 @@ const [user,setuser] =useState({});
 
 useEffect(()=>{
   const fetchuser= async ()=>{
-    const res=await axios.get(`/user/${post.userId}`) ; 
+    const res=await axios.get(`/user?userid=${post.userId}`) ; 
     console.log(res) ; 
     setuser(res.data) ; 
   }
@@ -47,7 +61,7 @@ useEffect(()=>{
           <div className={Style.postTopLeft}>
             <Link to={`/profile/${user.username}`}>
               <img
-                src={user.profilePicture || "../assets/noavater.jpg"}
+                src={user.profilePicture? user.profilePicture : PF+"noavater.jpg"}
                 alt=""
                 className={Style.postImage}
               />
@@ -66,13 +80,13 @@ useEffect(()=>{
         <div className={Style.postCenter}>
           <span className={Style.postText}>{post.desc}</span>
 
-          <img src={post.img} alt="" className={Style.postimg} />
+          <img src={PF+post.img} alt="" className={Style.postimg} />
         </div>
         <div className={Style.postBottom}>
           <div className={Style.postBottomLeft}>
              
-              <img src="/assets/like.png" role ="button"  id="like" onClick={e =>reply_click_like(e)} alt="" className={Style.react}/>
-              <img src="/assets/like.png" role ="button"  id="dislike" onClick={e =>reply_click_like(e)} alt="" className={Style.reactdl}/>
+              <img src={PF+"like.png"} role ="button"  id="like" onClick={e =>reply_click_like(e)} alt="" className={Style.react}/>
+              <img src={PF+"like.png"} role ="button"  id="dislike" onClick={e =>reply_click_like(e)} alt="" className={Style.reactdl}/>
                
          
 

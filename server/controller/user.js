@@ -6,18 +6,32 @@ import User from "/home/alpha/mern_stack/Social_Media/server/models/usermodel.js
 
 //Get a User Info. 
 
-export const GetUser = (req, res) => {
-    User.findById(req.params.id, (e, u) => {
-        if (u) {
-            const {password,updatedAt,...others} =u._doc ; 
-            res.status(200).json(others);
+export const GetUser =(req, res) => {
+    const userId=req.query.userid;
+    const userName=req.query.username; 
+
+    try {
+     userName? User.findOne({username:userName},(e,u)=>{
+        if(u){
+            const {password,updatedAt,...others} =u._doc 
+            res.send(others)
         } else {
-            res.status(404).send("user not found")
+            res.send(e)
         }
-    }) ; 
-
-
-
+    }) : User.findById(userId,(e,u)=>{
+        if(u){
+            const {password,updatedAt,...others} =u._doc 
+            res.send(others)
+        } else {
+            res.send(e)
+        }
+    })
+    
+ 
+    } catch (error) {
+        res.send(error) ; 
+        
+    }       
 
 }
 
@@ -146,4 +160,28 @@ export const UnFollowUser  =async (req,res) =>{
     }
     
     
+}
+
+
+export const GetFriends= async (req,res) =>{
+   try {
+    const getUser =  await User.findById(req.params.uid) ; 
+    const friends = await Promise.all(getUser.following.map((u)=>{
+        return User.findById(u) ; 
+    })) ; 
+ 
+let allfriends= [] ; 
+    friends.map((u)=>{
+        let   v ={
+            "_id":u._id,
+            "username":u.username,
+            "profilePicture":u.profilePicture
+        }
+       allfriends.push(v) ; 
+    })
+ res.status(200).send(allfriends); 
+   } catch (error) {
+       res.status(500).send(error)
+       
+   }
 }

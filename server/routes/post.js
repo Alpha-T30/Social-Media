@@ -1,5 +1,5 @@
 import express from "express" ; 
-import {GetAPost,CreatePost,UpdatePost,DeletePost,LikeAPost,CommentOnPost,GetAllPosts} from  "../controller/post.js"; 
+import {GetUserPosts,GetAPost,CreatePost,UpdatePost,DeletePost,LikeAPost,CommentOnPost,GetAllPosts} from  "../controller/post.js"; 
 
 const router=express.Router() ; 
 
@@ -18,7 +18,7 @@ router.get("/:id",GetAPost) ;
 router.get("/timeline/:Userid",GetAllPosts) ; 
 
 //get user's posts // 
-
+router.get("/userposts/:username",GetUserPosts)
  
 
 export default router ; 

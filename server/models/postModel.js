@@ -23,6 +23,6 @@ const PostSchema=new mongoose.Schema({
 {timestamps:true} 
 ) ; 
 
-const Posts =mongoose.model("Post",PostSchema) ; 
+const Posts =mongoose.model("Newpost",PostSchema) ; 
 
 export default Posts; 

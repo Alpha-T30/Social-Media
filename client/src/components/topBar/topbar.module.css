@@ -11,6 +11,9 @@
 
 .topBarLeft{
     flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 }
 .topBarRight{
@@ -102,3 +105,23 @@
     border-radius: 50%;
 }
 
+.logoutbtn{
+    font-weight: bold;
+    background-color: rgb(184, 184, 184);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 16px;
+    margin-right: 30px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 7px;
+    cursor: pointer;
+
+
+}
+.logoutbtn:focus{
+    outline: 1px solid black;
+}

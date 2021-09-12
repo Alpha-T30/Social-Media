@@ -6,6 +6,13 @@
 
 .container{
     flex: 9;
+    overflow-y: scroll;
+    height: calc(100vh - 50px) ; 
+}
+.container:hover::-webkit-scrollbar-thumb{
+  
+    background-color: rgb(190, 199, 199);
+
 }
 
 .profileRightBottom{
@@ -21,7 +28,7 @@
 
 .coverphoto{
     width: 100%;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
 }
 

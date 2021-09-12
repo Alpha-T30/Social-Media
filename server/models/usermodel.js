@@ -23,7 +23,7 @@ const UserSchema=new mongoose.Schema({
     } ,
     profilePicture:{
         type:String,
-        default:""
+         default:""
     } ,
     coverPicture:{
         type:String,
@@ -44,24 +44,29 @@ const UserSchema=new mongoose.Schema({
     desc:{ 
         type:String,
         max:100
+        ,
+        default:""
 
     },
     city:{
         type:String,
-        max:50
+        max:50,
+        default:""
     } ,
     homeTown:{
         type:String,
-        max:50
+        max:50 ,
+        default:""
     } ,
     relationship:{
         type:Number,
         enum:[1,2,3,4] , 
+        default:1 , 
     }
 }  , 
 {timestamps:true} 
 ) ; 
 
-const User =mongoose.model("User",UserSchema) ; 
+const User =mongoose.model("Newuser",UserSchema) ; 
 
 export default User;

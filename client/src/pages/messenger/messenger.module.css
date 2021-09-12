@@ -1,0 +1,241 @@
+.messenger{
+    width: 100%;
+    height: calc(100vh - 70px) ; 
+     
+    display: flex;
+}
+
+.chatList{
+    flex:3.5
+}
+.chatBox{
+    
+   
+  
+    flex:5.5
+}
+
+.chatOnline{
+    flex:3
+}
+
+.chatlistwrapper,.chatboxwrapper,.chatonlinewrapper{
+    
+    height: 100%;
+    padding: 10px;
+
+}
+.searchf{
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight:400 ;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid grey;
+
+} 
+.searchf:focus{
+    outline: none;
+}
+
+.chatboxwrapper{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-between;
+    
+     
+}
+.chatboxtop{
+   
+    flex: 8;
+    padding: 5px;
+    overflow-y: scroll;
+    height: 100%;
+    position: relative;
+}
+
+
+::-webkit-scrollbar{
+  width: 8px;
+  border-radius: 10px;
+
+}
+
+.chatboxtop::-webkit-scrollbar-thumb{
+
+  background-color: rgb(168, 168, 168);
+
+}
+
+::-webkit-scrollbar-track{
+  background-color: rgb(235, 235, 235);
+}
+
+.chatboxbottom{
+    display: flex;
+    flex: 1; 
+    margin-top: 20px;
+    position: relative;
+    bottom: 7px;
+     
+    align-items: center;
+    justify-content: space-between;
+}
+
+.messagetext{
+    width: 90%;
+    height: 50px;
+    padding:10px;
+    border-radius: 20px;
+}
+
+.messagetext:focus{
+   
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px #0099FF; 
+    outline: none;
+    transition: .1s;
+     
+}
+
+.sendbtn{
+    margin-left: 10px;
+   
+    width: 90px;
+    height: 40px;
+    background-color: green;
+    color:white; 
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    border: none;
+
+}
+.greeting{
+  color: rgb(180, 180, 180); 
+  position: absolute;
+  top: 30%;
+  
+}
+
+/* button */
+/* button */
+/* .glowonhover {
+    width: 90px;
+    height: 40px;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+     background-color: green;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  
+  .glowonhover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .glowonhover:active {
+    color: #000
+  }
+  
+  .glowonhover:active:after {
+    background: transparent;
+  }
+  
+  .glowonhover:hover:before {
+    opacity: 1;
+  }
+  
+  .glowonhover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: green;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  } */
+
+
+   
+ 
+
+  
+  
+  .a{
+      cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    width: 90px;
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    border-radius: 10px;
+    outline: none;
+  }
+  
+  .a span{
+    position: relative;
+    z-index: 2;
+     
+     
+  }
+  
+  .a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    border-radius: 8px;
+ 
+    height: 100%;
+    background: #36A420;
+    transition: all .35s;
+  }
+  
+  .a:hover{
+    color: #fff;
+  }
+  
+  .a:hover:after{
+   width: 100%;
+  }
